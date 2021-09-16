@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jobs Found</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main1.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Responsive Data From Monster</h2>
+        <ul class="responsive-table">
+            <li class="table-header">
+                <div class="col col-1">Job Title</div>
+                <div class="col col-2">Company Name</div>
+                <div class="col col-3">Job Location</div>
+                <div class="col col-4">Skills</div>
+                <div class="col col-5">Job Link</div>
+            </li>
+            {% for job in jobs %}
+            <li class="table-row">
+                <div class="col col-1">{{job['Job Title']}}</div>
+                <div class="col col-2">{{job['Company Name']}}</div>
+                <div class="col col-3">{{job['Job Location']}}</div>
+                <div class="col col-4">{{job['Skills']}}</div>
+                <div class="col col-5"><a href="{{job['Job Link']}}">Click here !</a></div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Monster Job Scrapper</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+    <div class="content">
+        <h1>Monster Job Scrapper</h1>
+        <!--<div class="flex-form">-->
+            <form action="/searchJob" method="POST">
+                <input type="search" name="jobtitle" id="jobtitle" placeholder="Enter Job Title"><br>
+                <input type="search" name="location" id="location" placeholder="Enter Preferred Location"><br>
+                <button type="submit" value="Search">Search</button>
+            </form>
+        <!--</div>-->
+    </div>
+</body>
+</html>
